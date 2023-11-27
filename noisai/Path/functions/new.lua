@@ -1,15 +1,26 @@
-return (function(Path)
-        
-    function Path.new(Sprites)
-            
-        local self = setmetatable( {
-                    
-            Sprites = pairs(Sprites:GetChildren())
-                    
-        }, Path )
+--[[
 
+local Noisai = require(workspace.Noisai)
+local dir = workspace.sprites
+
+
+local path = Noisai.Path.new(dir, function(sprites) 
+    return {
+        { sprites.start, 1 },
+        { sprites.end, 2 }
+    }
+end);
+
+
+]]
+
+return (function(Path) function Path.new(spritesDirectory, callback)
+    
+    local self = setmetatable( {
             
-        return self;
-    end
+    }, Path )
+
         
-end)
+    return self;
+            
+end end)
