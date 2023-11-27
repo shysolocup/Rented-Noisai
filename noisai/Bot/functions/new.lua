@@ -1,6 +1,6 @@
-return (function(Goober)
+return (function(Bot)
         
-    function Goober.new()
+    function Bot.new()
         local self = setmetatable( {}, Goober )
         return self;
     end
