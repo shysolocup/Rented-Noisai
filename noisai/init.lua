@@ -1,10 +1,6 @@
-local Noisai = {}
-Noisai.__index = Noisai
+local Bot = script.Parent.Bot
+local Path = script.Parent.Path
 
-local functions = script.Parent.functions
-
-for _, f in pairs(functions:getChildren()) do
-  f(Noisai)
-end
-
-return Noisai
+local exports = {
+  Bot, Path
+}
