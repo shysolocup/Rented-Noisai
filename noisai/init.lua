@@ -4,3 +4,5 @@ local Path = script.Parent.Path
 local exports = {
   Bot, Path
 }
+
+return exports
