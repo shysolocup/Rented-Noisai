@@ -1,2 +1,2 @@
 # Rented Noisai
-this repo goes over the inner workings of the AI in the roblox game Rented
+this repo contains and explains the code behind the AI from the Roblox game Rented
