@@ -17,8 +17,8 @@ return (function(Bot)
                 local cur = self:Cur();
                 local next = self:Get(to);
                     
-                cur.Visul.Transparency = 1
-                next.Visul.Transparency = 0
+                cur.Sprite.Transparency = 1
+                next.Sprite.Transparency = 0
         
                 next:PlaySFX();
                     
