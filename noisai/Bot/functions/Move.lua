@@ -2,7 +2,7 @@ local Values = require(workspace.Values)
 
 return (function(Bot)
         
-    function Bot:__move(to=nil)
+    function Bot:Move(to=nil)
         local noiseMax = Values:Get("placeholder");
         local noiseCur = Values:Get("placeholder");
 
