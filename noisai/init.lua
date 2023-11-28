@@ -1,5 +1,5 @@
 local Noisai = {}
-Noisai.__index = Bot
+Noisai.__index = Noisai
 
 local functions = script.Parent.functions
 
