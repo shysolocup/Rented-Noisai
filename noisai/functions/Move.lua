@@ -1,8 +1,8 @@
 local Values = require(workspace.Values)
 
-return (function(Bot)
+return (function(Noisai)
         
-    function Bot:Move(to=nil)
+    function Noisai:Move(to=nil)
         local noiseMax = Values:Get("placeholder");
         local noiseCur = Values:Get("placeholder");
 
