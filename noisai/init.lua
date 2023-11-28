@@ -1,8 +1,10 @@
-local Bot = script.Parent.Bot
-local Path = script.Parent.Path
+local Noisai = {}
+Noisai.__index = Bot
 
-local exports = {
-  Bot, Path
-}
+local functions = script.Parent.functions
 
-return exports
+for _, f in pairs(functions:GetChildren()) do
+  f(Noisai)
+end
+
+return Noisai
