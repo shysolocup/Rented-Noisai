@@ -7,7 +7,7 @@ return (function(Noisai)
         local noiseCur = Values:Get("placeholder");
 
         local rand = math.random(1, 20);
-        local chance = (rand - ( noiseMax/10 ) - (noiseCurrent/100) );
+        local chance = rand - ( noiseMax/10 )
         local move = chance <= level;
 
         if not to then to = self.At + 1 end;
