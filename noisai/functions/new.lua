@@ -1,4 +1,4 @@
-local Signal = require(script.Parent.Parent.Parent.Signal);
+local Signal = require(script.Parent.Parent.Signal);
 
 
 return (function(Noisai)
