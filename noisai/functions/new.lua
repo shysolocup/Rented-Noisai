@@ -51,7 +51,7 @@ return (function(Noisai)
         local self = setmetatable( {
 
             Character = Character,
-            At = 1
+            At = 1,
 
             --[[ data ]]
             Level = Character.ns_level.Value,
