@@ -1,6 +1,6 @@
-return (function(Bot)
+return (function(Noisai)
         
-    function Bot:Cur()
+    function Noisai:Cur()
         return self:Get(self.At)
     end
     
