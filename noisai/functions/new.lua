@@ -62,7 +62,7 @@ return (function(Noisai)
             Stuck = Signal.new(),
             Active = Signal.new()
             
-        }, Bot )
+        }, Noisai )
             
         return self;
     end
