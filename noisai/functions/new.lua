@@ -55,7 +55,7 @@ return (function(Noisai)
 
             --[[ data ]]
             Level = Character.ns_level.Value,
-            Path = ipairs(Character.ns_path:GetChildren()),
+            Path = Character.ns_path,
 
             --[[ signals ]]
             Moving = Signal.new(),
