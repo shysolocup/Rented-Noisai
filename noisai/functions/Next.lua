@@ -1,6 +1,6 @@
-return (function(Bot)
+return (function(Noisai)
         
-    function Bot:Next()
+    function Noisai:Next()
         return self:To(self.At+1)
     end
     
