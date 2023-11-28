@@ -9,22 +9,19 @@ workspace [
         ns_path: folder [
             First: part { 
                 ns_index: number
-                ns_sound: sound
-                ns_soundid: string
+                ns_sfx: sound
                 ns_sprite: decal/texture 
             }
 
             Second: part { 
                 ns_index: number
-                ns_sound: sound
-                ns_soundid: string
+                ns_sfx: sound
                 ns_sprite: decal/texture 
             }
 
             Last: part { 
                  ns_index: number
-                 ns_sound: sound
-                 ns_soundid: string
+                 ns_sfx: sound
                  ns_sprite: decal/texture 
             }
         ]
