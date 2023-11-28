@@ -10,25 +10,19 @@ workspace [
             First: part { 
                 ns_index: number
                 ns_sfx: sound
-                ns_sprites: folder [
-                    decal/texture    
-                ]
+                Sprite: decal/texture
             }
 
             Second: part { 
                 ns_index: number
                 ns_sfx: sound
-                ns_sprites: folder [
-                    decal/texture    
-                ]
+                Sprite: decal/texture
             }
 
             Last: part { 
                  ns_index: number
                  ns_sfx: sound
-                 ns_sprites: folder [
-                    decal/texture    
-                ]
+                 Sprite: decal/texture
             }
         ]
     ]
