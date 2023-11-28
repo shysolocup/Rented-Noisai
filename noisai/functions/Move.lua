@@ -16,8 +16,8 @@ return (function(Noisai)
                 local cur = self:Cur();
                 local next = self:Get(to);
                     
-                cur.Sprite.Transparency = 1
-                next.Sprite.Transparency = 0
+                cur.__sprite.Transparency = 1
+                next.__sprite.Transparency = 0
         
                 next:PlaySFX();
                     
