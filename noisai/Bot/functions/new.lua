@@ -11,6 +11,8 @@ return (function(Bot)
             Vision = Vision,
             Path = "placeholder",
 
+            At = 1
+
             --[[ signals ]]
             Moving = Signal.new(),
             Stuck = Signal.new(),
