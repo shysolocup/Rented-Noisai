@@ -51,12 +51,11 @@ return (function(Noisai)
         local self = setmetatable( {
 
             Character = Character,
+            At = 1
 
             --[[ data ]]
             Level = Character.ns_level.Value,
             Path = ipairs(Character.ns_path:GetChildren()),
-
-            At = 1
 
             --[[ signals ]]
             Moving = Signal.new(),
