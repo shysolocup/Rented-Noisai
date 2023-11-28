@@ -1,7 +1,7 @@
 return (function(Bot)
         
     function Bot:Cur()
-        return self.Path[self.At]
+        return self:Get(self.At)
     end
     
         
