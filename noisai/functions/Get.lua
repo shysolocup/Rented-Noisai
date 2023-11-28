@@ -1,6 +1,6 @@
-return (function(Bot)
+return (function(Noisai)
         
-    function Bot:Get(i)
+    function Noisai:Get(i)
         return self.Path:At(i)
     end
     
