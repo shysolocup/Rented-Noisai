@@ -5,17 +5,27 @@ workspace [
     Noisai: module { ... }
 
     Character: folder [
-        Sprites: folder [
+        ns_level: number
+        ns_path: folder [
             First: part { 
-                __sprite: decal/texture 
+                ns_index: number
+                ns_sound: sound
+                ns_soundid: string
+                ns_sprite: decal/texture 
             }
 
             Second: part { 
-                __sprite: decal/texture 
+                ns_index: number
+                ns_sound: sound
+                ns_soundid: string
+                ns_sprite: decal/texture 
             }
 
             Last: part { 
-                __sprite: decal/texture 
+                 ns_index: number
+                 ns_sound: sound
+                 ns_soundid: string
+                 ns_sprite: decal/texture 
             }
         ]
     ]
@@ -28,16 +38,9 @@ workspace [
 --[[
 
 local Noisai = require('workspace.Noisai');
-local data = workspace.Character
+local char = workspace.Character
 
-
-Noisai.new(10, data, function(sprites)
-    return {
-        { 1, sprites.First },
-        { 2, sprites.Second },
-        { 3, sprites.Last }
-    }
-end);
+Noisai.new(char);
 
 ]]
 
@@ -47,13 +50,14 @@ local Signal = require(script.Parent.Parent.Signal);
 
 return (function(Noisai)
         
-    function Noisai.new(Level: number, Data, callback)
+    function Noisai.new(Character)
         local self = setmetatable( {
 
+            Character = Character,
+
             --[[ data ]]
-            Level = Level,
-            Data = Data
-            Path = "placeholder",
+            Level = Character.ns_level.Value,
+            Path = ipairs(Character.ns_path:GetChildren()),
 
             At = 1
 
