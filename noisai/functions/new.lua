@@ -1,9 +1,9 @@
 local Signal = require(script.Parent.Parent.Parent.Signal);
 
 
-return (function(Bot)
+return (function(Noisai)
         
-    function Bot.new(Level: number, Vision)
+    function Noisai.new(Level: number, Vision)
         local self = setmetatable( {
 
             --[[ data ]]
