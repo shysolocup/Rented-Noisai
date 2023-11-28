@@ -1,7 +1,7 @@
 return (function(Bot)
         
-    function Bot:Get(p)
-        return self.Path:Get(p)
+    function Bot:Get(i)
+        return self.Path:At(i)
     end
     
         
