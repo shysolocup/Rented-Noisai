@@ -4,7 +4,6 @@ return (function(Noisai)
         
     function Noisai:Move(to=nil)
         local noiseMax = Values:Get("placeholder");
-        local noiseCur = Values:Get("placeholder");
 
         local rand = math.random(1, 20);
         local chance = rand - ( noiseMax/10 )
