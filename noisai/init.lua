@@ -3,8 +3,8 @@ Noisai.__index = Noisai
 
 local functions = script.functions
 
-for _, f in pairs(functions:GetChildren()) do
-	f(Noisai)
+for _, f in ipairs(functions:GetChildren()) do
+	require(f)(Noisai)
 end
 
 return Noisai
