@@ -2,7 +2,7 @@ local Values = require(workspace.Values)
 
 return (function(Noisai)
         
-    function Noisai:Move(to=nil)
+    function Noisai:To(to=nil)
         local noiseMax = Values:Get("placeholder");
 
         local rand = math.random(1, 20);
