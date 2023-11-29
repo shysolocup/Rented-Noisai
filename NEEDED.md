@@ -1,6 +1,10 @@
 # Stuff that are needed for the ai to work:
 
-- noise current and noise max
-- pathing
-- sprites
-- sounds
+- [x] noise current and noise max
+- [x] pathing
+- [x] sprites
+- [ ] sounds
+- [ ] jumpscares
+- [ ] lure distance
+- [ ] chase and roam
+- [ ] visibility part
