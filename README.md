@@ -3,7 +3,7 @@ this repo contains and explains the code behind the AI from the Roblox game Rent
 
 ```lua
 local Noisai = require('workspace.Noisai');
-local char = workspace.Character
+local char = workspace.chars.Character
 
 
 local bot = Noisai.new(char);
