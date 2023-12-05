@@ -9,6 +9,7 @@ workspace [
         ns_path: folder [
             First: part { 
                 ns_index: number
+                ns_room: number
                 ns_footsteps: sound
                 ns_jumpscare: sound
                 Sprite: decal/texture
@@ -16,6 +17,7 @@ workspace [
 
             Second: part { 
                 ns_index: number
+                ns_room: number
                 ns_footsteps: sound
                 ns_jumpscare: sound
                 Sprite: decal/texture
@@ -23,6 +25,7 @@ workspace [
 
             Last: part { 
                 ns_index: number
+                ns_room: number
                 ns_footsteps: sound
                 ns_jumpscare: sound
                 Sprite: decal/texture
@@ -70,7 +73,8 @@ return (function(Noisai)
 			--[[ signals ]]
 			Moving = Signal.new(),
 			Stuck = Signal.new(),
-			Active = Signal.new()
+			Active = Signal.new(),
+			Watched = Signal.new()
 
 		}, Noisai )
 		
