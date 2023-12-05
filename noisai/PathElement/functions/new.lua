@@ -4,7 +4,9 @@ return (function(PathElement)
 
 		local self = setmetatable( {
 
-			Part = Part
+			Part = Part,
+			Index = Part.ns_index,
+			Room = Part.ns_room
 
 		}, PathElement )
 
