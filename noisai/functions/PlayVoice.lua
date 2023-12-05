@@ -1,7 +1,8 @@
 return (function(Noisai)
 
-	function Noisai:PlayVoice()
-		self.Voicelines[ math.random(1, #self.Voicelines) ]:Play()
+	function Noisai:PlayVoice(v)
+		if not v then v = math.random(1, #self.Voicelines) end
+		self.Voicelines[v]:Play()
 	end
 
 end)
