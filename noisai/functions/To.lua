@@ -1,32 +1,40 @@
 local Values = require(workspace.Values)
 
 return (function(Noisai)
-        
-    function Noisai:To(to=nil)
-        local noiseMax = Values:Get("placeholder");
 
-        local rand = math.random(1, 20);
-        local chance = rand - ( noiseMax/10 )
-        local move = chance <= level;
+	function Noisai:To(to)
+		local origin = self.At
+		local noisePeak = Values:Fetch("noisePeak").Value;
 
-        if not to then to = self.At + 1 end;
+		local rand = math.random(1, 20);
+		local chance = rand - ( noisePeak/10 )
+		local move = chance <= self.Level;
 
-        if move then
-        
-                local cur = self:Cur();
-                local next = self:Get(to);
-                    
-                cur.__sprite.Transparency = 1
-                next.__sprite.Transparency = 0
-        
-                next:PlaySFX();
-                    
-                self.At = to
-                self.Moving:Fire(self.At, to);
-        else
-                self.Stuck:Fire(self.At, to);
-        end
-    end
-    
-        
+		if not to then to = self.At + 1 end;
+
+		if move then
+
+			local cur = self:Cur();
+			local nxt = self:Get(to);
+			
+			for _, s in pairs(cur:Sprites()) do
+				s.Transparency = 1
+			end
+			
+			if nxt then
+				for _, s in pairs(nxt:Sprites()) do
+					s.Transparency = 0
+				end
+			end
+
+			-- nxt:PlaySFX();
+
+			self.At = to
+			self.Moving:Fire(origin, to);
+		else
+			self.Stuck:Fire(origin, to);
+		end
+	end
+
+
 end)
