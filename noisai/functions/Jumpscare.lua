@@ -3,8 +3,8 @@ local Values = require(workspace.Values)
 return (function(Noisai)
 
 	function Noisai:Jumpscare()
-        local jumpscare = Values:Fetch("jumpscare")
-		jumpscare.Value = true
+        local val = Values:Fetch("jumpscare")
+		val.Value = true
 			
 		self.Jumpscare:Fire()
 	end
