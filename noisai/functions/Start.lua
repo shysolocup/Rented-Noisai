@@ -7,16 +7,53 @@ return (function(Noisai)
 		
 		while self.Active do
 			local origin = self.At
+			
+			local lure = {
+				Active = Values:Fetch("lureActive"),
+				Room = Values:Fetch("lureRoom")
+			}
+			
 			local noisePeak = Values:Fetch("noisePeak").Value;
+			local current = Values:Fetch("currentCamera").Value;
 
 			local rand = math.random(1, 20);
 			local chance = rand - ( noisePeak/10 )
 			local move = chance <= self.Level;
 			
-			print(move)
 			
-			if move then
-				self:Next()
+			local watching; if current == self:Cur().Room then watching = true else watching = false end
+			
+			
+			if move and not watching then
+				if (lure.Active) then
+					local diff
+					local e
+					
+					if (lure.Room > self.At) then
+						diff = lure.Room-self.At
+						e = 1
+					elseif (lure.Room < self.At) then
+						diff = self.At-lure.Room
+						e = 2
+					elseif (lure.Room == self.At) then
+						diff = 0
+						e = 3
+					end
+					
+					if (diff == 0) then
+						self:Next()
+						
+					else
+						if (diff <= 2) then
+							self:To(lure.Room)
+						end
+					end
+				else
+					self:Next()	
+				end
+			elseif watching then
+				self.Watched:Fire(current, origin);
+				self.Stuck:Fire(origin);
 			else
 				self.Stuck:Fire(origin);
 			end
