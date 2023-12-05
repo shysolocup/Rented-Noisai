@@ -5,13 +5,13 @@ workspace [
     Noisai: module { ... }
 
     Character: folder [
-        ns_level: number
+        ns_level: number,
+        ns_jumpscare: sound
         ns_path: folder [
             First: part { 
                 ns_index: number
                 ns_room: number
                 ns_footsteps: sound
-                ns_jumpscare: sound
                 Sprite: decal/texture
             }
 
@@ -19,7 +19,6 @@ workspace [
                 ns_index: number
                 ns_room: number
                 ns_footsteps: sound
-                ns_jumpscare: sound
                 Sprite: decal/texture
             }
 
@@ -27,7 +26,6 @@ workspace [
                 ns_index: number
                 ns_room: number
                 ns_footsteps: sound
-                ns_jumpscare: sound
                 Sprite: decal/texture
             }
         ]
@@ -67,7 +65,6 @@ return (function(Noisai)
 			
 			
 			--[[ sound effects ]]
-			Footsteps = Character.ns_footsteps,
 			Jumpscare = Character.ns_jumpscare,
 
 			--[[ signals ]]
