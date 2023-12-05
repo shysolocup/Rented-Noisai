@@ -7,7 +7,11 @@ workspace [
 	char: folder [
 	    Character: folder [
 	        ns_level: number,
-	        ns_jumpscare: sound
+	        ns_jumpscare: sound,
+			ns_voicelines: folder [
+				thing: sound
+				abc: sound
+			]
 	        ns_path: folder [
 	            First: part { 
 	                ns_index: number
