@@ -72,6 +72,7 @@ return (function(Noisai)
 			
 			--[[ sound effects ]]
 			Jumpscare = Character.ns_jumpscare,
+			Voicelines = {}
 
 			--[[ signals ]]
 			Moving = Signal.new(),
@@ -88,6 +89,11 @@ return (function(Noisai)
 		
 		for _, p in pairs(Path:GetChildren()) do
 			self.Path[p.ns_index.Value] = PathElement.new(p)
+		end
+
+
+		for i, vl in ipairs(Character.ns_voicelines:GetChildren()) do
+			self.Voicelines[i] = vl
 		end
 		
 
