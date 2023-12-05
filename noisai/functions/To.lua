@@ -18,7 +18,7 @@ return (function(Noisai)
 				end
 			end
 
-			-- nxt:PlaySFX();
+			cur.SFX:Play()
 
 			self.At = to
 			self.Moving:Fire(origin, to);
