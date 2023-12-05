@@ -6,7 +6,8 @@ return (function(PathElement)
 
 			Part = Part,
 			Index = Part.ns_index,
-			Room = Part.ns_room
+			Room = Part.ns_room,
+			SFX = Part.ns_footsteps
 
 		}, PathElement )
 
