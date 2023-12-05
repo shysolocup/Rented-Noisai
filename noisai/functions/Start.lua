@@ -34,7 +34,9 @@ return (function(Noisai)
 			
 			if move and not watching then
 				if (math.random(1, 10) < 1) then
-					self:PlayVoice()
+					pcall(function()
+						self:PlayVoice()
+					end)
 				end
 					
 				if (lure.Active) then
