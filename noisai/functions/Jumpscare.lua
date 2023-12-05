@@ -1,8 +1,12 @@
+local Values = require(workspace.Values)
+
 return (function(Noisai)
 
 	function Noisai:Jumpscare()
-        self.Jumpscare:Fire()
+        local jumpscare = Values:Fetch("jumpscare")
+		self.Jumpscare:Fire()
+		
+		jumpscare.Value = true
 	end
-
 
 end)
