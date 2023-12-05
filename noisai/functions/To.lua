@@ -20,8 +20,15 @@ return (function(Noisai)
 
 			cur.SFX:Play()
 
-			self.At = to
+			if (self.At == #self.Path) then
+				self:Jumpscare()
+			else
+				self.At = to
+			end
+
 			self.Moving:Fire(origin, to);
+
+			return cur
 	end
 
 
