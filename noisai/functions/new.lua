@@ -5,7 +5,6 @@ workspace [
     Noisai: module { ... }
 
 	char: folder [
-
 	    Character: folder [
 	        ns_level: number,
 	        ns_jumpscare: sound
