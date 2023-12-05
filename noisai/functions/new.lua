@@ -40,7 +40,7 @@ workspace [
 -- code example
 --[[
 
-local Noisai = require('workspace.Noisai');
+local Noisai = require(workspace.Noisai);
 local char = workspace.chars.Character
 
 Noisai.new(char);
