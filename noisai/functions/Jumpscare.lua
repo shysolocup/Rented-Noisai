@@ -4,9 +4,9 @@ return (function(Noisai)
 
 	function Noisai:Jumpscare()
         local jumpscare = Values:Fetch("jumpscare")
-		self.Jumpscare:Fire()
-		
 		jumpscare.Value = true
+			
+		self.Jumpscare:Fire()
 	end
 
 end)
