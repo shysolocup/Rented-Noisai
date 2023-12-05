@@ -79,7 +79,8 @@ return (function(Noisai)
 			Stuck = Signal.new(),
 			Active = Signal.new(),
 			Watched = Signal.new(),
-			Lonely = Signal.new()
+			Lonely = Signal.new(),
+			Jumpscare = Signal.new
 
 		}, Noisai )
 		
