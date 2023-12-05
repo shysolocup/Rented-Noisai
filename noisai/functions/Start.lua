@@ -7,6 +7,7 @@ return (function(Noisai)
 		
 		while self.Active do
 			local origin = self.At
+			local previous
 			
 			local lure = {
 				Active = Values:Fetch("lureActive"),
@@ -22,6 +23,13 @@ return (function(Noisai)
 			
 			
 			local watching; if current == self:Cur().Room then watching = true else watching = false end
+
+
+			if watching and not previous then
+				self.Watched:Fire(current, origin);
+			elseif previous and not watching or not previous and not watching then
+				self.Lonely:Fire(current, origin);
+			end
 			
 			
 			if move and not watching then
@@ -51,14 +59,11 @@ return (function(Noisai)
 				else
 					self:Next()	
 				end
-			elseif watching then
-				self.Watched:Fire(current, origin);
-				self.Stuck:Fire(origin);
 			else
 				self.Stuck:Fire(origin);
 			end
 			
-			
+			previous = watching
 			wait( math.random(21-self.Level) )
 		end
 	end
