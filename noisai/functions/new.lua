@@ -4,31 +4,34 @@
 workspace [
     Noisai: module { ... }
 
-    Character: folder [
-        ns_level: number,
-        ns_jumpscare: sound
-        ns_path: folder [
-            First: part { 
-                ns_index: number
-                ns_room: number
-                ns_footsteps: sound
-                Sprite: decal/texture
-            }
+	char: folder [
 
-            Second: part { 
-                ns_index: number
-                ns_room: number
-                ns_footsteps: sound
-                Sprite: decal/texture
-            }
-
-            Last: part { 
-                ns_index: number
-                ns_room: number
-                ns_footsteps: sound
-                Sprite: decal/texture
-            }
-        ]
+	    Character: folder [
+	        ns_level: number,
+	        ns_jumpscare: sound
+	        ns_path: folder [
+	            First: part { 
+	                ns_index: number
+	                ns_room: number
+	                ns_footsteps: sound
+	                Sprite: decal/texture
+	            }
+	
+	            Second: part { 
+	                ns_index: number
+	                ns_room: number
+	                ns_footsteps: sound
+	                Sprite: decal/texture
+	            }
+	
+	            Last: part { 
+	                ns_index: number
+	                ns_room: number
+	                ns_footsteps: sound
+	                Sprite: decal/texture
+	            }
+	        ]
+		]
     ]
 ]
 
@@ -39,7 +42,7 @@ workspace [
 --[[
 
 local Noisai = require('workspace.Noisai');
-local char = workspace.Character
+local char = workspace.chars.Character
 
 Noisai.new(char);
 
