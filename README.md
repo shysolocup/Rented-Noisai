@@ -2,8 +2,32 @@
 this repo contains and explains the code behind the AI from the Roblox game Rented
 
 ```lua
-local Noisai = require(workspace.Noisai)
-local bot = Noisai.new( --[[ placeholder ]] )
+local Noisai = require('workspace.Noisai');
+local char = workspace.Character
+
+
+local bot = Noisai.new(char);
+
+
+bot.Moving:Connect(function(origin, cam)
+    print("successfully moved from "..origin.." to "..cam)
+end)
+
+
+bot.Stuck:Connect(function(origin, cam)
+    print("got stuck trying to move from "..origin.." to "..cam)
+end)
+
+
+bot.Watched:Connect(function(cam)
+    print("watched on camera "..cam)
+end)
+
+
+bot.Jumpscare:Connect(function(player)
+  print("jumpscared player")
+end)
+
 
 bot:Start()
 ```
