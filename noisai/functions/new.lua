@@ -71,7 +71,8 @@ return (function(Noisai)
 			Moving = Signal.new(),
 			Stuck = Signal.new(),
 			Active = Signal.new(),
-			Watched = Signal.new()
+			Watched = Signal.new(),
+			Lonely = Signal.new()
 
 		}, Noisai )
 		
