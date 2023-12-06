@@ -23,7 +23,7 @@ return (function(Noisai)
 		cur.SFX:Play()
 
 		if (self.At == #self.Path) then
-			self:Jumpscare()
+			self:PrepJumpscare()
 		else
 			self.At = to
 		end
