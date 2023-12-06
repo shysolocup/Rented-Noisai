@@ -24,7 +24,7 @@ bot.Watched:Connect(function(cam)
 end)
 
 
-bot.Jumpscare:Connect(function()
+bot.Jumpscaring:Connect(function()
   print("jumpscared player")
 end)
 
