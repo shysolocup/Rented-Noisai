@@ -9,13 +9,13 @@ local char = workspace.chars.Character
 local bot = Noisai.new(char);
 
 
-bot.Moving:Connect(function(origin, cam)
-    print("successfully moved from "..origin.." to "..cam)
+bot.Moving:Connect(function(origin, to)
+    print("successfully moved from "..origin.." to "..to)
 end)
 
 
-bot.Stuck:Connect(function(origin, cam)
-    print("got stuck trying to move from "..origin.." to "..cam)
+bot.Stuck:Connect(function(origin, to)
+    print("got stuck trying to move from "..origin.." to "..to)
 end)
 
 
