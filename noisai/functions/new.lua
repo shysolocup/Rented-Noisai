@@ -81,6 +81,7 @@ return (function(Noisai)
 			Watched = Signal.new(),
 			Lonely = Signal.new(),
 			Prepping = Signal.new(),
+			Resetting = Signal.new(),
 			Jumpscaring = Signal.new()
 
 		}, Noisai )
