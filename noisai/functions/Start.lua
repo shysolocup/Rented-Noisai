@@ -23,8 +23,8 @@ return (function(Noisai)
 
 
 			local watching; if current == self:Cur().Room then watching = true else watching = false end
-
-
+			
+			
 			if watching and not previous then
 				self.Watched:Fire(current, origin);
 			elseif previous and not watching or not previous and not watching then
@@ -49,7 +49,7 @@ return (function(Noisai)
 			end
 
 			previous = watching
-			wait( 20/self.Level )
+			wait( 25/self.Level )
 		end
 	end
 
