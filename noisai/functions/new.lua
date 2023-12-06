@@ -71,7 +71,7 @@ return (function(Noisai)
 
 
 			--[[ sound effects ]]
-			Jumpscare = Character.ns_jumpscare,
+			JumpscareSFX = Character.ns_jumpscare,
 			Voicelines = {},
 
 			--[[ signals ]]
