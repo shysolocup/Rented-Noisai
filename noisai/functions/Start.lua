@@ -33,23 +33,22 @@ return (function(Noisai)
 
 
 			if move and not watching then
-				if (math.random(1, 10) < 1) then
-					pcall(function()
-						self:PlayVoice()
-					end)
-				end
 
-				if (lure.Active) then
+				--[[ if (lure.Active) then
 					-- lure mechanics are not in yet
-				else
+				else ]]
 					self:Next()	
+				-- end
+				
+				if (math.random(1, 10) < 1) then
+					-- self:PlayVoice()
 				end
 			else
 				self.Stuck:Fire(origin);
 			end
 
 			previous = watching
-			wait( 25/self.Level )
+			wait( 30/self.Level )
 		end
 	end
 
