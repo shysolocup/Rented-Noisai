@@ -59,7 +59,7 @@ local PathElement = require(script.Parent.Parent.PathElement)
 return (function(Noisai)
 
 	function Noisai.new(Character)
-		
+
 		local self = setmetatable( {
 
 			Character = Character,
@@ -68,11 +68,11 @@ return (function(Noisai)
 			--[[ data ]]
 			Level = Character.ns_level.Value,
 			Path = {},
-			
-			
+
+
 			--[[ sound effects ]]
 			Jumpscare = Character.ns_jumpscare,
-			Voicelines = {}
+			Voicelines = {},
 
 			--[[ signals ]]
 			Moving = Signal.new(),
@@ -80,14 +80,14 @@ return (function(Noisai)
 			Active = Signal.new(),
 			Watched = Signal.new(),
 			Lonely = Signal.new(),
-			Jumpscare = Signal.new
+			Jumpscaring = Signal.new()
 
 		}, Noisai )
-		
-		
+
+
 		local Path = Character.ns_path
-		
-		
+
+
 		for _, p in pairs(Path:GetChildren()) do
 			self.Path[p.ns_index.Value] = PathElement.new(p)
 		end
@@ -96,7 +96,7 @@ return (function(Noisai)
 		for i, vl in ipairs(Character.ns_voicelines:GetChildren()) do
 			self.Voicelines[i] = vl
 		end
-		
+
 
 		return self;
 	end
