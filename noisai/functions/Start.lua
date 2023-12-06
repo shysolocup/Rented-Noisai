@@ -49,7 +49,7 @@ return (function(Noisai)
 			end
 
 			previous = watching
-			wait( math.random(20/self.Level) )
+			wait( math.random(1, 20/self.Level) )
 		end
 	end
 
